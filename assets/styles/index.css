@@ -370,7 +370,7 @@ figcaption>a{
     padding: 8px 15px;
     opacity: 0.6;
 }
-.loginbtn:hover, :focus{
+.loginbtn:hover, .loginbtn:focus{
     opacity: 1;
     box-shadow: none;
     border: none;
@@ -439,7 +439,7 @@ figcaption>a{
     color: rgb(185, 185, 185);
     position: absolute;
     top: 27%; 
-    right: 28%;
+    right: 27%;
 }
 .closebtn:focus{
     border: none;

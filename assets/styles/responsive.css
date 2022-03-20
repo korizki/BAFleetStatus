@@ -1,0 +1,72 @@
+@media screen and (max-width: 375px){
+    .headerhome{
+        padding: 10px;
+
+    }
+    .brandptba{
+        width: 90px;
+        top: 15px;
+        left: 15px;
+    }
+    figcaption{
+        padding-block-start: 0px;
+        text-align: center;
+    }
+    figcaption>h2{
+        font-size: 2.5rem;
+        line-height: 1.5;
+    }
+    figcaption>p{
+        font-size: 0.9rem;
+    }
+    figcaption>a{
+        width: 100%;
+    }
+    .content{
+        flex-direction: column;
+        padding: 40px 15px;
+        gap: 20px;
+    }
+    .content>figure>img{
+        width: 100%;
+    }
+    .contentlogin{
+        padding: 40px 20px;
+    }
+    .contentlogin>h2{
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+    .contentlogin>p{
+        font-weight: 300;
+        font-size: 0.9rem;
+        padding: 20px;
+        line-height: 1.5;
+    }
+    footer{
+        font-weight: 0.9rem;
+        line-height: 1.7;
+    }
+    .loginbox{
+        flex-direction: column;
+        align-items: center;
+    }
+    .loginform{
+        width: 90%;
+        margin-inline-start: 0;
+        height: auto;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        margin-block-start: 10%;
+    }
+    .closebtn{
+        top: 7%;
+        right: 10%;
+    }
+    .loginform>div{
+        flex: none;
+        width: 100%;
+        padding: 30px;
+    }
+}

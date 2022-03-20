@@ -2,7 +2,7 @@
 
 function filterUnitAPT($area, $location){
     include "connection.php";
-    return mysqli_query($connection, "SELECT * FROM t_unit WHERE area = '$area' AND location = '$location' AND status IN('Ready','Breakdown') AND unit_type IN ('Grader','Dozer','Compac','PC200','Water Tank') ORDER BY unit_name ASC");
+    return mysqli_query($connection, "SELECT * FROM t_unit WHERE area = '$area' AND location = '$location' AND status IN('Ready','Breakdown','Standby','General') AND unit_type IN ('Grader','Dozer','Compac','PC200','Water Tank') ORDER BY unit_name ASC");
 };
 $queryaptjalanpit2 = filterUnitAPT('PIT 2', 'Jalan');
 $queryaptfrontpit2 = filterUnitAPT('PIT 2', 'Front');
