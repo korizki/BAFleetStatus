@@ -38,7 +38,7 @@
             <label for="unitname">Unit Name</label>
             <select name="unitname" id="unitname">
                 <?php 
-                    $sqlunit = mysqli_query($connection, "SELECT * FROM t_unit WHERE unit_type IN ('Dozer','Grader','Shovel PC-3000','Excavator','Water Tank','Compac','PC200') ORDER BY unit_name");
+                    $sqlunit = mysqli_query($connection, "SELECT * FROM t_unit WHERE unit_type IN ('Dozer','Grader','Shovel PC-3000','Belaz','PC 1250','HD PPA','Excavator','Water Tank','Compac','PC200') ORDER BY unit_name");
                     while($rowunit = mysqli_fetch_array($sqlunit)){
                         ?>
                             <option value="<?php echo $rowunit['unit_name']?>"><?php echo $rowunit['unit_name']?></option>

@@ -1,7 +1,10 @@
-@media screen and (max-width: 375px){
+@media screen and (max-width: 425px){
     .headerhome{
         padding: 10px;
 
+    }
+    .setUnit{
+        font-size: 0.7rem;
     }
     .brandptba{
         width: 90px;
@@ -68,5 +71,81 @@
         flex: none;
         width: 100%;
         padding: 30px;
+    }
+    /* halaman Summary Breakdown */
+    header>.judul{
+        font-size: 1.5rem;
+        margin-block-start: 30px;       
+        background-size: auto; 
+    }
+    main{
+        padding: 30px 15px;
+        font-size: 12px;
+    }
+    .boxeqtype{
+        flex-direction: column;
+    }
+    .boxlocation>h3{
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+ 
+    .boxShovel{
+        padding: 10px;
+    }
+    .boxdetailshovel{
+        gap: 15px;
+    }
+    .boxdetailshovel>img{
+        width: 20px;
+    }
+    .shovelstatus{
+        padding: 10px;
+        width: 120px;
+        text-align: center;
+    }
+    .shovelsummary>div{
+        padding: 10px;
+        line-height: 1;
+    }
+    
+    .shovelsummary>div>p{
+        font-size: 0.6rem;
+    }
+    .aptarea{
+        padding: 15px;
+        gap: 20px;
+    }
+    .aptarea>h2{
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .aptarea>h2>i{
+        display: block;
+    }
+    .aptarea>div{
+        gap: 6px;
+    }
+    .aptarea>div>p{
+        padding: 4px 10px;
+        font-size: 0.6rem;
+    }
+    .coalsummary>div>h3{
+        font-size: 0.8rem;
+    }
+    .coalsummary>div>p{
+        text-align: center;
+    }
+    .coalsummary>.shovelstatus{
+        font-size: 0.8rem;
+        width: 180px;
+    }
+    .coalsummary>p{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 375px){
+    .shovelstatus{
+        width: 200px;
     }
 }

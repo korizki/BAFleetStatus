@@ -46,7 +46,7 @@
         </div>
         <div class="contentlogin">
             <h2>Maintenance Availability Unit and Fleet Setting </h2>
-            <p>Already have access as an Administrator? Please Log In.</p>
+            <p>Already have access as an Administrator? <br>Please Log In.</p>
             <a href="#" class="btnlogin" onclick="showlogin()"><i class="fa fa-sign-in-alt" style="margin-inline-end: 10px"></i>Get Logged In</a>
         </div>
    </div>
