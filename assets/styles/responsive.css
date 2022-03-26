@@ -3,17 +3,24 @@
         padding: 10px;
 
     }
+    .judulapt{
+        margin-top: 0px !important;
+    }
     .setUnit{
         font-size: 0.7rem;
+        text-align: center;
     }
     .brandptba{
-        width: 90px;
+        width: 140px;
         top: 15px;
-        left: 15px;
+        left: 30px;
     }
     figcaption{
         padding-block-start: 0px;
         text-align: center;
+    }
+    .pit3>h4{
+        width: 120px;
     }
     figcaption>h2{
         font-size: 2.5rem;
@@ -47,8 +54,9 @@
         line-height: 1.5;
     }
     footer{
-        font-weight: 0.9rem;
+        font-size: 0.8rem;
         line-height: 1.7;
+        padding: 12px;
     }
     .loginbox{
         flex-direction: column;
@@ -71,6 +79,10 @@
         flex: none;
         width: 100%;
         padding: 30px;
+        padding-top: 0;
+    }
+    .loginform>figure>img {
+        width: 250px;
     }
     /* halaman Summary Breakdown */
     header>.judul{
@@ -92,6 +104,7 @@
  
     .boxShovel{
         padding: 10px;
+        margin-bottom: 30px;
     }
     .boxdetailshovel{
         gap: 15px;
@@ -101,7 +114,7 @@
     }
     .shovelstatus{
         padding: 10px;
-        width: 120px;
+        width: 150px;
         text-align: center;
     }
     .shovelsummary>div{
@@ -120,8 +133,8 @@
         width: 100%;
         font-size: 0.9rem;
     }
-    .aptarea>h2>i{
-        display: block;
+    .shovelsummary>div{
+        border-radius: 6px;
     }
     .aptarea>div{
         gap: 6px;
@@ -137,12 +150,73 @@
         text-align: center;
     }
     .coalsummary>.shovelstatus{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         width: 180px;
     }
     .coalsummary>p{
         font-size: 0.7rem;
     }
+    .headeradmin{
+        padding: 10px;
+        border-radius: 6px;
+    }
+    .headeradmin>details>summary{
+        font-size: 0.8rem;
+    }
+    .boxmenu{
+        padding:20px 5px;
+    }
+    .boxmenu>button{
+        width: 100%;
+        margin: 8px 0;
+        font-size: 0.8rem;
+    }
+    .boxinputlocation{
+        width: 90%;
+        margin-inline-start: 5%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .boxinputlocation>form{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .boxinputlocation>form>select,input,button{
+        width: 100%;
+    }
+    .header>h2{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .boxinputlocation>.header>p{
+        margin-top: 25px;
+    }
+    .coaltitle>h1{
+        font-size: 0.9rem;
+        transform: translateY(-10px);
+    }
+    .headeradmin{
+        border-radius: 6px;
+        padding: 12px;
+    }
+    .boxmenu{
+        padding: 20px 10px;
+    }
+    .boxmenu>button{
+        font-size:0.8rem;
+        padding: 10px 20px;
+        width: 100%;
+        margin: 9px 0px;
+        
+    }
+    .boxinputlocation>form{
+        align-items: flex-start;
+    }
+    .boxform>form>button{
+        margin-top: 20px;
+    }
+    
 }
 @media screen and (max-width: 375px){
     .shovelstatus{

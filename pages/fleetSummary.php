@@ -22,7 +22,7 @@
         <?php include "pit2Equipment.php" ?>
         <?php include "pit3Equipment.php" ?>
     </main>
-    <footer>
+    <footer style="margin-top: 0">
         <p>Copyright &copy; 2022  PT. Bukit Asam (Persero) Tbk.</p>
     </footer>
 </body>

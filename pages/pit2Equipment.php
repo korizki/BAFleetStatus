@@ -76,7 +76,7 @@
                 $queryshovel = mysqli_query($connection, "SELECT DISTINCT(unit_name) FROM t_unit WHERE area = 'PIT 3' AND unit_type IN('Shovel PC-3000', 'PC 1250') AND status IN('Ready','Breakdown','Standby','General') ORDER BY unit_name DESC");
                 while($rowshovel = mysqli_fetch_array($queryshovel)){
                     ?>
-                        <div class="boxdetailshovel" style=" justify-content: space-around">
+                        <div class="boxdetailshovel pit3" style=" justify-content: space-around">
                             <img src="../assets/logo/exca.svg" alt="shovelicon" style="margin-inline-start: 5px;"/>
                             <h4 id="shovelName" class="shovelstatus <?php echo mysqli_fetch_array(getStatus($rowshovel['unit_name']))['status']?>" title="Unit <?php echo mysqli_fetch_array(getStatus($rowshovel['unit_name']))['status'];?>"><?php echo $rowshovel['unit_name'] ?></h4>
                             <div class="setUnit">
