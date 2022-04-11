@@ -23,7 +23,7 @@
                     <?php 
                         include "../codes/connection.php"; 
                         $no = 1;
-                        $getdata = $connection->query("SELECT TOP(50) * FROM t_fleet INNER JOIN t_unit ON fleet_unit = t_unit.unit_name WHERE t_unit.unit_type IN ('Shovel PC-3000','PC 1250') ORDER BY id_fleet DESC");
+                        $getdata = $connection->query("SELECT * FROM t_fleet INNER JOIN t_unit ON fleet_unit = t_unit.unit_name WHERE t_unit.unit_type IN ('Shovel PC-3000','PC 1250') ORDER BY id_fleet DESC LIMIT 50");
                         while($row = $getdata->fetch(PDO::FETCH_ASSOC)){
                             ?>
                             <tr>
@@ -66,7 +66,7 @@
                 <?php 
                         include "../codes/connection.php"; 
                         $no = 1;
-                        $getdata = $connection->query("SELECT TOP(50) * FROM t_fleet INNER JOIN t_unit ON fleet_unit = t_unit.unit_name WHERE t_unit.unit_type IN ('Excavator','Excavator Tanah', 'Excavator Coal') ORDER BY id_fleet DESC");
+                        $getdata = $connection->query("SELECT * FROM t_fleet INNER JOIN t_unit ON fleet_unit = t_unit.unit_name WHERE t_unit.unit_type IN ('Excavator','Excavator Tanah', 'Excavator Coal') ORDER BY id_fleet DESC LIMIT 50");
                         while($row = $getdata->fetch(PDO::FETCH_ASSOC)){
                             ?>
                             <tr>
