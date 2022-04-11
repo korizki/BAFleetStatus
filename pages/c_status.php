@@ -1,5 +1,6 @@
 <div class="boxcontents">
-    <details id="status1" class="tablecontent" style="display : <?php echo ($_SESSION['username'] == 'Admin Coal') ? 'none' : 'block' ?>">
+       
+    <details id="status11" class="tablecontent" style="display : <?php echo ($_SESSION['username'] == 'Admin Coal') ? 'none' : 'block' ?>">
         <summary>
             <h2><i class="fa fa-cube" style="margin-inline-end: 10px;"></i>Status Unit (OB) </h2>
         </summary>
@@ -40,10 +41,18 @@
             </table>
         </div>
     </details>
-    <details id="status2" class="tablecontent" style="display : <?php echo ($_SESSION['username'] == 'Admin OB') ? 'none' : 'block' ?>">
+    <details id="status22" class="tablecontent" style="display : <?php echo ($_SESSION['username'] == 'Admin OB') ? 'none' : 'block' ?>">
         <summary>
             <h2><i class="fa fa-cubes" style="margin-inline-end: 10px;"></i>Status Unit (Coal) </h2>
         </summary>
+        
+        // script set details open saat halaman dirender
+        <script>
+            document.getElementById('status11').open = true;
+            document.getElementById('status22').open = true;
+            console.log('success')
+        </script>
+
         <div class="maincontentsection">
             <button onclick="showforminputbdcoal()"> <i class="fa fa-plus" style="margin-inline-end: 8px"></i>Update Status Unit</button>
         </div>
@@ -84,7 +93,3 @@
         </div>
     </details>
 </div>
-<script>
-    document.getElementById('status1').open = true;
-    document.getElementById('status2').open = true;
-</script>
