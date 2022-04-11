@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    if(isset($_POST['logins'])){
+        if(isset($_POST['username'])){
+            if($_POST['username'] == 'Admin OB' OR $_POST['username'] == 'Admin Coal'){
+                if($_POST['password'] == 'bukitasam2022'){
+                    $_SESSION['username'] = $_POST['username'];
+                    header('Location: pages/admin.php');
+                } else {
+                    header('Location: index.php?login=failed');    
+                }
+            } else {
+                header('Location: index.php?login=failed');
+            }
+        }   
+    }
+    if(isset($_GET['logout'])){
+        if($_GET['logout'] =='success'){
+            echo "<script>alert('Log Out berhasil.')</script>";
+        } 
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,22 +29,28 @@
     <title>Bukit Asam | Monitoring System</title>
     <link rel="stylesheet" href="assets/styles/index.css" />
     <link rel="stylesheet" href="assets/styles/responsive.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="icon" href="assets/logo/icon.svg" />
     <script defer src="assets/script.js"></script>
+    <script defer src="assets/styles/all.min.js"></script>
 </head>
 <body style="background-image: url('assets/bg2.svg'); background-size: cover; background-position: 20% 140px">
     <?php
         if(isset($_GET['login'])){
-            if($_GET['login'] == 'wronguser'){
+            if($_GET['login'] == 'failed'){
                 echo "
-                <script>alert('Log In Failed, Wrong Username')
+                <script>alert('Log In gagal, Password atau Username salah')
                 </script>
                 ";
             }
-            if($_GET['login'] == 'wrongpass'){
+            if($_GET['login'] == 'failed'){
                 echo "
-                <script>alert('Log In Failed, Wrong Password')</script>
+                <script>alert('Log In gagal, Password atau Username salah')</script>
+                ";
+            }
+            if($_GET['login'] == 'nouser'){
+                echo "
+                <script>alert('Silahkan Log In terlebih dahulu!')</script>
                 ";
             }
         }
@@ -46,12 +74,15 @@
         </div>
         <div class="contentlogin">
             <h2>Maintenance Availability Unit and Fleet Setting </h2>
-            <p style="line-height: 1.8">Already have access as an Administrator? <br>Please Log In.</p>
+            <p>Already have access as an Administrator? Please Log In.</p>
             <a href="#" class="btnlogin" onclick="showlogin()"><i class="fa fa-sign-in-alt" style="margin-inline-end: 10px"></i>Get Logged In</a>
         </div>
    </div>
    <footer style="background: var(--blue1); margin-block-start: 0 !important;">
-       <p>Copyright &copy; 2022 PT. Bukit Asam (Persero) Tbk. | <a href="https://storyset.com/work"> Illustrations by Storyset</a> | SVG Background by <a target="_blank" href="https://bgjar.com">BGJar</a></p>
+       <p>Copyright &copy; 2022 PT. Bukit Asam (Persero) Tbk. 
+        <div style="margin-top: 20px">
+            <a href="https://storyset.com/work"> Illustrations by Storyset</a> | SVG Background by <a target="_blank" href="https://bgjar.com">BGJar</a> | Icons by <a target="_blank" href="https://fontawesome.com"> FontAwesome</a></p>
+        </div> 
    </footer>
    <div class="loginbox">
         <div class="loginform">
@@ -61,7 +92,7 @@
             </figure>    
             <div>
                 <h2>Log In Form</h2>
-                <form action="#" method="get">
+                <form action="" method="post">
                     <div>
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username">
@@ -74,11 +105,7 @@
                 </form>
             </div>
         </div>
-        <?php 
-            if(isset($_GET['logins'])){
-                header('Location: pages/admin.php');
-            };
-        ?>
+        
    </div>
 </body>
 </html>

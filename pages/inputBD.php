@@ -32,21 +32,21 @@
                     };
                 } 
             ?>
-            
+            <i class="fa fa-lg fa-times-circle" onclick="closeformbdob()" style="cursor: pointer"></i>
         </div>
-        <form action="../codes/handleSubmitLocation.php" method="post" style="justify-content: center">
+        <form action="../codes/handleSubmitLocation.php" method="post" autocomplete="off" style="justify-content: center">
             <label for="unitname">Unit Name</label>
-            <select name="unitname" id="unitname">
-                <option value="" selected disabled>-- Choose Unit --</option>
+            <input list="unitnames" name="unitname" id="unitname">
+            <datalist id="unitnames">
                 <?php 
-                    $sqlunit = mysqli_query($connection, "SELECT * FROM t_unit WHERE unit_type IN ('Shovel PC-3000','Belaz','PC 1250','HD PPA','Grader','Dozer','PC200','Water Tank','Compac') ORDER BY unit_name");
-                    while($rowunit = mysqli_fetch_array($sqlunit)){
+                    $sqlunit = $connection->query("SELECT * FROM t_unit WHERE unit_type IN ('Shovel PC-3000','Grader','Dozer','Belaz','PC 1250','HD PPA','PC200','Water Tank','Compac') ORDER BY unit_name");
+                    while($rowunit = $sqlunit->fetch(PDO::FETCH_ASSOC)){
                         ?>
                             <option value="<?php echo $rowunit['unit_name']?>"><?php echo $rowunit['unit_name']?></option>
                         <?php
                     }
                 ?>
-            </select>
+            </datalist>
             <label for="type">Status</label>
             <select name="type" id="type" class="combostatus">
                 <option value="" disabled selected>-- Status --</option>
@@ -59,9 +59,6 @@
             <input type="text" id="detailstatus" name="detailstatus" >
             <button type="submit" name="submitdatabd"><i class="fa fa-paper-plane" style="margin-inline-end: 8px" ></i>Submit Data</button>
         </form>
-        <div style="display: flex; justify-content: flex-end">
-            <button class="cancelbtnform" onclick = "closeformbdob()">Back / Cancel</button>
-        </div>
     </div>
 </div>
 <div class="outerform" id="updatebdcoal">
@@ -98,21 +95,22 @@
                     };
                 } 
             ?>
-            
+            <i class="fa fa-lg fa-times-circle" onclick="closeformbdcoal()" style="cursor: pointer"></i>
         </div>
-        <form action="../codes/handleSubmitLocation.php" method="post" style="justify-content: center">
+        <form action="../codes/handleSubmitLocation.php" method="post" autocomplete="off" style="justify-content: center">
             <label for="unitname">Unit Name</label>
-            <select name="unitname" id="unitname">
-                <option value="" selected disabled>-- Choose Unit --</option>
+            <input list="unitnames2" name="unitname" id="unitname">
+            <datalist id="unitnames2">
                 <?php 
-                    $sqlunit = mysqli_query($connection, "SELECT * FROM t_unit WHERE unit_type IN ('Excavator','Excavator Tanah','Excavator Coal') ORDER BY unit_name");
-                    while($rowunit = mysqli_fetch_array($sqlunit)){
+                    $sqlunit = $connection->query("SELECT * FROM t_unit WHERE unit_type IN ('Excavator','Excavator Tanah','Excavator Coal', 'DT Kamaz') ORDER BY unit_name");
+                    while($rowunit = $sqlunit->fetch(PDO::FETCH_ASSOC)){
                         ?>
                             <option value="<?php echo $rowunit['unit_name']?>"><?php echo $rowunit['unit_name']?></option>
                         <?php
                     }
                 ?>
-            </select>
+            </datalist>
+            
             <label for="type">Status</label>
             <select name="type" id="type" class="combostatus">
                 <option value="" disabled selected>-- Status --</option>
@@ -125,8 +123,5 @@
             <input type="text" id="detailstatus" name="detailstatus" >
             <button type="submit" name="submitdatabdcoal"><i class="fa fa-paper-plane" style="margin-inline-end: 8px" ></i>Submit Data</button>
         </form>
-        <div style="display: flex; justify-content: flex-end">
-            <button class="cancelbtnform" onclick = "closeformbdcoal()">Back / Cancel</button>
-        </div>
     </div>
 </div>

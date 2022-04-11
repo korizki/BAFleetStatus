@@ -32,28 +32,36 @@
                     };
                 } 
             ?>
-            
+            <i class="fa fa-lg fa-times-circle" onclick="closeformfleetob()" style="cursor: pointer"></i>
         </div>
-        <form action="../codes/handleSubmitLocation.php" method="post" style="justify-content: center">
+        <form action="../codes/handleSubmitLocation.php" method="post" autocomplete="off" style="justify-content: center">
             <label for="unitname">Unit Name</label>
-            <select name="unitname" id="unitname">
-                <option value="" selected disabled>-- Choose Shovel --</option>
+            <input list="listloader" name="unitname" id="unitname" style="width: 150px">
+            <datalist id="listloader">
                 <?php 
-                    $sqlunit = mysqli_query($connection, "SELECT * FROM t_unit WHERE unit_type IN ('Shovel PC-3000','PC 1250') ORDER BY unit_name");
-                    while($rowunit = mysqli_fetch_array($sqlunit)){
+                    $sqlunit = $connection->query("SELECT * FROM t_unit WHERE unit_type IN ('Shovel PC-3000','PC 1250') ORDER BY unit_name");
+                    while($rowunit = $sqlunit->fetch(PDO::FETCH_ASSOC)){
                         ?>
                             <option value="<?php echo $rowunit['unit_name']?>"><?php echo $rowunit['unit_name']?></option>
                         <?php
                     }
                 ?>
-            </select>
+            </datalist>
             <label for="totalhauler">Total Hauler</label>
             <input type="number" name="totalhauler" id="totalhauler" style="width: 100px">
+            <label for="jenishauler">Jenis Hauler</label>
+            <input list="jenishaulers" name="jenishauler" id="jenishauler" style="width: 150px">
+            <datalist id="jenishaulers">
+                <option value="Belaz">Belaz</option>
+                <option value="HD PPA">HD PPA</option>
+                <option value="Hino">Hino</option>
+                <option value="Kamaz">Kamaz</option>
+                <option value="Power Plus">Power Plus</option>
+                <option value="SKT">SKT</option>
+                <option value="Sany">Sany</option>
+            </datalist>
             <button type="submit" name="submitdatafleet"><i class="fa fa-paper-plane" style="margin-inline-end: 8px" ></i>Submit Data</button>
         </form>
-        <div style="display: flex; justify-content: flex-end">
-            <button class="cancelbtnform" onclick = "closeformfleetob()">Back / Cancel</button>
-        </div>
     </div>
 </div>
 <div class="outerform" id="updatesettingfleetcoal">
@@ -90,27 +98,35 @@
                     };
                 } 
             ?>
-            
+            <i class="fa fa-lg fa-times-circle" onclick="closeformfleetcoal()" style="cursor: pointer"></i>
         </div>
-        <form action="../codes/handleSubmitLocation.php" method="post" style="justify-content: center">
+        <form action="../codes/handleSubmitLocation.php" autocomplete="off" method="post" style="justify-content: center">
             <label for="unitname">Unit Name</label>
-            <select name="unitname" id="unitname">
-                <option value="" selected disabled>-- Choose Shovel --</option>
+            <input list="listloadcoal" name="unitname" id="unitname" style="width: 150px">
+            <datalist id="listloadcoal">
                 <?php 
-                    $sqlunit = mysqli_query($connection, "SELECT * FROM t_unit WHERE unit_type IN ('Excavator','Excavator Tanah','Excavator Coal') ORDER BY unit_name");
-                    while($rowunit = mysqli_fetch_array($sqlunit)){
+                    $sqlunit = $connection->query("SELECT * FROM t_unit WHERE unit_type IN ('Excavator','Excavator Tanah','Excavator Coal') ORDER BY unit_name");
+                    while($rowunit = $sqlunit->fetch(PDO::FETCH_ASSOC)){
                         ?>
                             <option value="<?php echo $rowunit['unit_name']?>"><?php echo $rowunit['unit_name']?></option>
                         <?php
                     }
                 ?>
-            </select>
+            </datalist>
             <label for="totalhauler">Total Hauler</label>
             <input type="number" name="totalhauler" id="totalhauler" style="width: 100px">
+            <label for="jenishauler">Jenis Hauler</label>
+            <input list="jenishaulers" name="jenishauler" id="jenishauler" style="width: 150px">
+            <datalist id="jenishaulers">
+                <option value="Belaz">Belaz</option>
+                <option value="HD PPA">HD PPA</option>
+                <option value="Hino">Hino</option>
+                <option value="Kamaz">Kamaz</option>
+                <option value="Power Plus">Power Plus</option>
+                <option value="SKT">SKT</option>
+                <option value="Sany">Sany</option>
+            </datalist>
             <button type="submit" name="submitdatafleetcoal"><i class="fa fa-paper-plane" style="margin-inline-end: 8px" ></i>Submit Data</button>
         </form>
-        <div style="display: flex; justify-content: flex-end">
-            <button class="cancelbtnform" onclick = "closeformfleetcoal()">Back / Cancel</button>
-        </div>
     </div>
 </div>
