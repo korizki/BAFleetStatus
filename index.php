@@ -42,16 +42,12 @@
                 <script>alert('Log In gagal, Password atau Username salah')
                 </script>
                 ";
-            }
-            if($_GET['login'] == 'failed'){
-                echo "
-                <script>alert('Log In gagal, Password atau Username salah')</script>
-                ";
-            }
-            if($_GET['login'] == 'nouser'){
-                echo "
-                <script>alert('Silahkan Log In terlebih dahulu!')</script>
-                ";
+            } else {
+                if($_GET['login'] == 'nouser'){
+                    echo "
+                    <script>alert('Silahkan Log In terlebih dahulu!')</script>
+                    ";
+                }
             }
         }
     ?>

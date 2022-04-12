@@ -45,8 +45,8 @@
         <summary>
             <h2><i class="fa fa-cubes" style="margin-inline-end: 10px;"></i>Status Unit (Coal) </h2>
         </summary>
-        
-        // script set details open saat halaman dirender
+
+        <!-- script set details open saat halaman dirender -->
         <script>
             document.getElementById('status11').open = true;
             document.getElementById('status22').open = true;
