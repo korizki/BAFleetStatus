@@ -569,3 +569,17 @@ figcaption>a{
     color: white;
     border-radius: 3px;
 }
+.detailunit>p{
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+.detailunit>h3{
+    font-size: 1.2rem;
+}
+.bdetailunit{
+    display: flex; 
+    justify-content:space-around;
+    gap: 10px;
+    margin: 20px 0;
+    align-items: center;
+}

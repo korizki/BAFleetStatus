@@ -10,24 +10,66 @@
             <div class="shovelsummary">
                 <div>
                     <h3>Ready</h3>
-                    <p >Shovel : <span> <?php echo $readypit2->fetchColumn()?> Unit<span></p>
-                    <p >PC | PPA : <span><?php echo countUnit('PIT 2', 'PC 1250', 'Ready')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($belazready2) ?>">Belaz : <span><?php echo countUnit('PIT 2', 'Belaz', 'Ready')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($hdready2) ?>">HD | PPA : <span><?php echo countUnit('PIT 2', 'HD PPA', 'Ready')->fetchColumn()?> Unit</span></p>
+                    <div class="bdetailunit">
+                        <div class='detailunit'>
+                            <p >Shovel</p>
+                            <h3><?php echo $readypit2->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p >PC-PPA</p>
+                            <h3><?php echo countUnit('PIT 2', 'PC 1250', 'Ready')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($belazready2) ?>">Belaz</p>
+                            <h3><?php echo countUnit('PIT 2', 'Belaz', 'Ready')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($hdready2) ?>">HD PPA</p>
+                            <h3><?php echo countUnit('PIT 2', 'HD PPA', 'Ready')->fetchColumn()?></h3>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h3>Breakdown</h3>
-                    <p >Shovel : <span><?php echo $breakdownpit2->fetchColumn()?> Unit</span></p>
-                    <p >PC | PPA : <span><?php echo countUnit('PIT 2', 'PC 1250', 'Breakdown')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($belazbd2) ?>">Belaz : <span><?php echo countUnit('PIT 2', 'Belaz', 'Breakdown')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($hdbd2) ?>">HD | PPA : <span><?php echo countUnit('PIT 2', 'HD PPA', 'Breakdown')->fetchColumn()?> Unit</span></p>
+                    <div class="bdetailunit">
+                        <div class='detailunit'>
+                            <p >Shovel</p>
+                            <h3><?php echo $breakdownpit2->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p >PC-PPA</p>
+                            <h3><?php echo countUnit('PIT 2', 'PC 1250', 'Breakdown')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($belazbd2) ?>">Belaz</p>
+                            <h3><?php echo countUnit('PIT 2', 'Belaz', 'Breakdown')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($hdbd2) ?>">HD PPA</p>
+                            <h3><?php echo countUnit('PIT 2', 'HD PPA', 'Breakdown')->fetchColumn()?></h3>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h3>Standby</h3>
-                    <p >Shovel : <span><?php echo $standbypit2->fetchColumn()?> Unit</span></p>
-                    <p >PC | PPA : <span><?php echo countUnit('PIT 2', 'PC 1250', 'Standby')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($belazst2) ?>">Belaz : <span><?php echo countUnit('PIT 2', 'Belaz', 'Standby')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($hdst2) ?>">HD | PPA : <span><?php echo countUnit('PIT 2', 'HD PPA', 'Standby')->fetchColumn()?> Unit</span></p>
+                    <div class="bdetailunit">
+                        <div class='detailunit'>
+                            <p >Shovel</p>
+                            <h3><?php echo $standbypit2->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p >PC-PPA</p>
+                            <h3><?php echo countUnit('PIT 2', 'PC 1250', 'Standby')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($belazst2) ?>">Belaz</p>
+                            <h3><?php echo countUnit('PIT 2', 'Belaz', 'Standby')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($hdst2) ?>">HD PPA</p>
+                            <h3><?php echo countUnit('PIT 2', 'HD PPA', 'Standby')->fetchColumn()?></h3>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="datainfo">
@@ -149,24 +191,66 @@
             <div class="shovelsummary" style="justify-content: space-around">
                 <div>
                     <h3>Ready</h3>
-                    <p>Shovel : <span><?php echo $readypit3->fetchColumn()?> Unit</span></p>
-                    <p>PC | PPA : <span><?php echo countUnit('PIT 3', 'PC 1250', 'Ready')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($belazready3) ?>">Belaz : <span><?php echo countUnit('PIT 3', 'Belaz', 'Ready')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($hdready3) ?>">HD | PPA : <span><?php echo countUnit('PIT 3', 'HD PPA', 'Ready')->fetchColumn()?> Unit</span></p>
+                    <div class="bdetailunit">
+                        <div class='detailunit'>
+                            <p >Shovel</p>
+                            <h3><?php echo $readypit3->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p >PC-PPA</p>
+                            <h3><?php echo countUnit('PIT 3', 'PC 1250', 'Ready')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($belazready3) ?>">Belaz</p>
+                            <h3><?php echo countUnit('PIT 3', 'Belaz', 'Ready')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($hdready3) ?>">HD PPA</p>
+                            <h3><?php echo countUnit('PIT 3', 'HD PPA', 'Ready')->fetchColumn()?></h3>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h3>Breakdown</h3>
-                    <p>Shovel : <span><?php echo $breakdownpit3->fetchColumn()?> Unit</span></p>
-                    <p>PC | PPA : <span><?php echo countUnit('PIT 3', 'PC 1250', 'Breakdown')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($belazbd3) ?>">Belaz : <span><?php echo countUnit('PIT 3', 'Belaz', 'Breakdown')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($hdbd3) ?>">HD | PPA : <span><?php echo countUnit('PIT 3', 'HD PPA', 'Breakdown')->fetchColumn()?> Unit</span></p>
+                    <div class="bdetailunit">
+                        <div class='detailunit'>
+                            <p >Shovel</p>
+                            <h3><?php echo $breakdownpit3->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p >PC-PPA</p>
+                            <h3><?php echo countUnit('PIT 3', 'PC 1250', 'Breakdown')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($belazbd3) ?>">Belaz</p>
+                            <h3><?php echo countUnit('PIT 3', 'Belaz', 'Breakdown')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($hdbd3) ?>">HD PPA</p>
+                            <h3><?php echo countUnit('PIT 3', 'HD PPA', 'Breakdown')->fetchColumn()?></h3>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h3>Standby</h3>
-                    <p>Shovel : <span><?php echo $standbypit3->fetchColumn()?> Unit</span></p>
-                    <p>PC | PPA : <span><?php echo countUnit('PIT 3', 'PC 1250', 'Standby')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($belazst3) ?>">Belaz : <span><?php echo countUnit('PIT 3', 'Belaz', 'Standby')->fetchColumn()?> Unit</span></p>
-                    <p title ="<?php echo PrintUnit($hdst3) ?>">HD | PPA : <span><?php echo countUnit('PIT 3', 'HD PPA', 'Standby')->fetchColumn()?> Unit</span></p>
+                    <div class="bdetailunit">
+                        <div class='detailunit'>
+                            <p >Shovel</p>
+                            <h3><?php echo $standbypit3->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p >PC-PPA</p>
+                            <h3><?php echo countUnit('PIT 3', 'PC 1250', 'Standby')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($belazst3) ?>">Belaz</p>
+                            <h3><?php echo countUnit('PIT 3', 'Belaz', 'Standby')->fetchColumn()?></h3>
+                        </div>
+                        <div class="detailunit">
+                            <p title ="<?php echo PrintUnit($hdst3) ?>">HD PPA</p>
+                            <h3><?php echo countUnit('PIT 3', 'HD PPA', 'Standby')->fetchColumn()?></h3>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="datainfo">
