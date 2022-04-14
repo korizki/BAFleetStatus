@@ -119,7 +119,9 @@
                 <div class='aptarea boxShovel'>
                     <h1>Mining Support Unit</h1>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-snowplow " style="margin-inline-end: 10px;"></i>Dozer <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Dozer')->fetchColumn()?> Unit </span></summary>
+                        <summary><i class="fa fa-snowplow " style="margin-inline-end: 10px;"></i>Dozer <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Dozer')->fetchColumn()?> Unit </span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 2', 'Dozer', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 2', 'Dozer', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptfront = $querydozerpit2->fetch(PDO::FETCH_ASSOC)){
@@ -131,7 +133,9 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-road" style="margin-inline-end: 10px;"></i>Grader <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Grader')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-road" style="margin-inline-end: 10px;"></i>Grader <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Grader')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 2', 'Grader', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 2', 'Grader', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptdisposal = $querygraderpit2->fetch(PDO::FETCH_ASSOC)){
@@ -143,7 +147,9 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-caret-square-down" style="margin-inline-end: 10px;"></i>Compac <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Compac')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-caret-square-down" style="margin-inline-end: 10px;"></i>Compac <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Compac')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 2', 'Compac', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 2', 'Compac', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptjalan = $querycompacpit2->fetch(PDO::FETCH_ASSOC)){
@@ -155,7 +161,9 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-check-double" style="margin-inline-end: 10px;"></i>PC 200 <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'PC200')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-check-double" style="margin-inline-end: 10px;"></i>PC 200 <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'PC200')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 2', 'PC200', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 2', 'PC200', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptjalan = $querypcpit2->fetch(PDO::FETCH_ASSOC)){
@@ -167,7 +175,9 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-tint" style="margin-inline-end: 10px;"></i>Water Tank <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Water Tank')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-tint" style="margin-inline-end: 10px;"></i>Water Tank <span style="float: right"><?php echo filterUnitAPT('PIT 2', 'Water Tank')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 2', 'Water Tank', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 2', 'Water Tank', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptjalan = $querywtpit2->fetch(PDO::FETCH_ASSOC)){
@@ -300,7 +310,9 @@
                 <div class='aptarea boxShovel'>
                     <h1>Mining Support Unit</h1>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-snowplow " style="margin-inline-end: 10px;"></i>Dozer <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Dozer')->fetchColumn()?> Unit </span></summary>
+                        <summary><i class="fa fa-snowplow " style="margin-inline-end: 10px;"></i>Dozer <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Dozer')->fetchColumn()?> Unit </span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 3', 'Dozer', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 3', 'Dozer', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptfront = $querydozerpit3->fetch(PDO::FETCH_ASSOC)){
@@ -312,7 +324,9 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-road" style="margin-inline-end: 10px;"></i>Grader <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Grader')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-road" style="margin-inline-end: 10px;"></i>Grader <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Grader')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 3', 'Grader', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 3', 'Grader', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptdisposal = $querygraderpit3->fetch(PDO::FETCH_ASSOC)){
@@ -324,7 +338,9 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-caret-square-down" style="margin-inline-end: 10px;"></i>Compac <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Compac')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-caret-square-down" style="margin-inline-end: 10px;"></i>Compac <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Compac')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 3', 'Compac', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 3', 'Compac', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptjalan = $querycompacpit3->fetch(PDO::FETCH_ASSOC)){
@@ -336,7 +352,9 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-check-double" style="margin-inline-end: 10px;"></i>PC 200 <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'PC200')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-check-double" style="margin-inline-end: 10px;"></i>PC 200 <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'PC200')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 3', 'PC200', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 3', 'PC200', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p>
+                        </summary>
                         <div>
                             <?php 
                                 while($rowaptjalan = $querypcpit3->fetch(PDO::FETCH_ASSOC)){
@@ -348,7 +366,8 @@
                         </div>
                     </details>
                     <details title="Click to Expand">
-                        <summary><i class="fa fa-tint" style="margin-inline-end: 10px;"></i>Water Tank <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Water Tank')->fetchColumn()?> Unit</span></summary>
+                        <summary><i class="fa fa-tint" style="margin-inline-end: 10px;"></i>Water Tank <span style="float: right"><?php echo filterUnitAPT('PIT 3', 'Water Tank')->fetchColumn()?> Unit</span>
+                        <p class='papt'><span class='aptready'><?php echo countUnit('PIT 3', 'Water Tank', 'Ready')->fetchColumn()?> Unit</span> <span class='aptbreakdown'><?php echo countUnit('PIT 3', 'Water Tank', 'Breakdown')->fetchColumn()?> Unit</span> <span style="font-style: italic; font-weight: 300;">* Click for detail</span></p></summary>
                         <div>
                             <?php 
                                 while($rowaptjalan = $querywtpit3->fetch(PDO::FETCH_ASSOC)){
